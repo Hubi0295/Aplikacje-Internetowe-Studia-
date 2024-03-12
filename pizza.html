@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pizza </title>
+</head>
+<body>
+<div id="kontener">
+<h1>Kreator pizzy</h1>
+    <form method="post">
+                <fieldset><legend>Rozmiar: </legend>
+                <input type="radio" name="size" value="Small"/>Mała
+                <input type="radio" name="size" value="Medium"/>Średnia
+                <input type="radio" name="size" value="Large"/>Duża
+                </fieldset>
+
+                <fieldset><legend>Dodatki: </legend>
+                <input type="checkbox" name="ham" value="ham"/>Szynka<br>
+                <input type="checkbox" name="salami" value="salami"/>Salami<br>
+                <input type="checkbox" name="becon" value="becon"/>Boczek<br>
+                <input type="checkbox" name="pepper" value="pepper"/>Papryka<br>
+                <input type="checkbox" name="tomato" value="tomato"/>Pomidor<br>
+                <input type="checkbox" name="cheese" value="cheese"/>Ser<br>
+                </fieldset>
+
+                <fieldset><legend>Sosy: </legend>
+
+                Wybierz sos: <select size="4" name="sosy" multiple>
+                <option value="Pomidorowy">Pomidorowy</option>
+                <option value="Czosnkowy">Czosnkowy</option>
+                <option value="Ketchup łagodny">Ketchup łagodny</option>
+                <option value="Ketchup pikantny">Ketchup pikantny</option>
+                </select>
+
+                <br>
+                Inne uwagi:
+                <textarea cols="70" rows="5" name="uwagi"></textarea><br>
+                </fieldset>
+                <input type="reset" value="Wyczyść dane" />
+                <input type="submit" value="Wyślij zamowienie" />
+        </form>
+</div>
+</body>
+</html>

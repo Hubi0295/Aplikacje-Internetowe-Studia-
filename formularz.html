@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> formularze </title>
+</head>
+<body>
+<div id="kontener">
+
+    <h2>Formularze</h2>
+    <div id="menu">
+        <a href="index.html">Podstawowe znaczniki</a>
+        <a href="tabele.html">Tworzenie tabel</a>
+        <a href="formularz.html">Budowa formularzy</a>
+    </div>
+    <div id="tresc">
+        Tu będzie umieszczony krótki opis podstawowych
+        tagów HTML.
+        <p><a href="">HTML walidator<img src="w3c.png" alt="abc"></a></p>
+    </div>
+    <div>
+        <form method="post">
+            Nazwisko: <input type="text" name="nazwisko"/> <br />
+            Wiek:      <input type="text" name="wiek"/> <br /><br />
+            Państwo:   <select name="panstwa">
+                <option value="p">Polska</option>
+                <option value="u">USA</option>
+                <option value="n">Niemcy</option>
+                <option value="f">Francja</option>
+                <option value="h">Hiszpania</option>
+            </select>
+            <br />
+            Adres Email: <input type="text" name="email"/> <br /><br />
+            <b>Zamawiam tutorial z języka</b><br>
+            <input type="checkbox" name="php" value="PHP" /> PHP
+            <input type="checkbox" name="c/cpp" value="C/C++" /> C/C++
+            <input type="checkbox" name="java" value="Java" /> Java <br />
+            <b>Sposób zapłaty</b><br>
+            <input type="radio" name="platnosc" value="euro" /> eurocard
+            <input type="radio" name="platnosc" value="visa" /> visa
+            <input type="radio" name="platnosc" value="przelew" />przelew bankowy<br>
+            <input type="submit" value="Wyślij" />
+            <input type="reset" value="Anuluj" />
+            <!-- Inne znaczniki pól formularza -->
+            <br />Wskaż hobby i uzasadnij dlaczego to lubisz:
+            <br />
+        </form>
+        </div>
+        <div id="stopka"> &copy;BP </div>
+</div>
+</body>
+</html>
