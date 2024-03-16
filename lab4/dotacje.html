@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> dotacje </title>
+</head>
+<body>
+<div id="kontener">
+    <h2>Formularz dotacji</h2>
+    <div>
+        <form method="post">
+            <fieldset>
+                <label for="beneficient">Beneficient:</label>
+                <input list="beneficient-list" id="beneficient" name="beneficient" title="Wybierz z listy beneficjenta" required/><br>
+                <datalist id="beneficient-list">
+                    <option value="Przedszkole nr 20"></option>
+                    <option value="Fundacja mały miś"></option>
+                    <option value="Schronisko przytulny kąt"></option>
+                </datalist>
+                <label for="Wartosc">Wartosc dotacji:</label><input type="number" step="10" min="20" id="Wartosc" name="Wartosc" title="Podaj wartość podarunku, minimum 20, skoki co 10" required/> <br /><br />
+                <br />
+            </fieldset>
+
+            <fieldset>
+                    <legend>Dane karty płatniczej</legend>
+                <label>Karta: </label>
+                    <input type="radio" name="platnosc" value="visa" id="visa" title="metodą płatności jest Visa" required/>
+                <label for="visa">Visa</label>
+                    <input type="radio" name="platnosc" value="mastercard" id="mastercard" title="metodą płatności jest Master Card" required/>
+                <label for="mastercard">Master Card</label><br>
+                <label for="Numer">Numer: </label>
+                    <input type="text" id="Numer" name="Numer" title="Podaj 13 lub 16 cyfrowy numer konta" pattern="[0-9]{13}|[0-9]{16}" required/> <br />
+                <label for="Data wazności">Data ważności: </label>
+                    <input type="month" id="Data wazności" title="Podaj miesiąc i rok ważności karty" name="Data wazności" required/> <br />
+                <label for="CVV">Kod CVV: </label>
+                    <input type="text" id="CVV" name="CVV" pattern="[0-9]{3}|[0-9]{4}" title="podaj 3 lub 4 cyfrowy numer CCV z tyłu karty" required/> <br />
+            </fieldset>
+
+            <label for="darczynca">Darczyńca: </label>
+            <input type="text" id="darczynca" name="darczynca" pattern="[a-zA-Z]{3,}" title="Podpisz siebie, kto daje podarunek" required/> <br />
+
+            <input type="submit" value="Rejestruj" />
+            <input type="reset" value="Wyczyść" />
+        </form>
+    </div>
+    <div id="stopka"> &copy;BP </div>
+</div>
+</body>
+</html>
