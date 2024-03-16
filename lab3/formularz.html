@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> formularze </title>
+    <link rel="stylesheet" href="CSS/formularze.css" type="text/css">
+
+</head>
+<body>
+<div id="kontener">
+
+    <h2>Formularze</h2>
+    <div id="menu">
+        <a href="index.html">Podstawowe znaczniki</a>
+        <a href="tabele.html">Tworzenie tabel</a>
+        <a href="formularz.html">Budowa formularzy</a>
+    </div>
+    <div id="tresc">
+        <h2>Postawowe znaczniki formularza HTML to:</h2>
+        <ul>
+            <li> &lt;form&gt;  - znacznik podstawowy zawierający pola formularza</li>
+            <li> &lt;input&gt;  - znacznik umożliwa wstawianie różnych pól(pola tekstowe, przycisk typu radio, przycisk typu checkbox) w zależności od wartości jego atrybutu type</li>
+            <li> &lt;select&gt;  - pola formularza typu lista rozwijana</li>
+            <li> &lt;textarea&gt;  - pola formularza typu obszar tekstowy</li>
+            <li> &lt;button&gt;  - pola formularza typu przycisk</li>
+        </ul>
+        <p><a href="">HTML walidator<img src="w3c.png" alt="abc"></a></p>
+    </div>
+    <div>
+        <form method="post">
+            <label>Nazwisko: </label><input type="text" name="nazwisko"/> <br />
+            <label>Wiek:</label><input type="text" name="wiek"/> <br /><br />
+            <label>Państwo:</label><select name="panstwa">
+                <option value="p">Polska</option>
+                <option value="u">USA</option>
+                <option value="n">Niemcy</option>
+                <option value="f">Francja</option>
+                <option value="h">Hiszpania</option>
+            </select>
+            <br />
+            <label>Adres Email</label>: <input type="text" name="email"/> <br /><br />
+            <b>Zamawiam tutorial z języka</b><br>
+            <input type="checkbox" name="php" value="PHP" /> <label>PHP</label>
+            <input type="checkbox" name="c/cpp" value="C/C++" /> <label>C/C++</label>
+            <input type="checkbox" name="java" value="Java" /> <label>Java</label> <br />
+            <b>Sposób zapłaty</b><br>
+            <input type="radio" name="platnosc" value="euro" /> <label>eurocard</label>
+            <input type="radio" name="platnosc" value="visa" /> <label>visa</label>
+            <input type="radio" name="platnosc" value="przelew" /><label>przelew bankowy</label><br>
+            <input type="submit" value="Wyślij" />
+            <input type="reset" value="Anuluj" />
+        </form>
+        </div>
+        <div id="stopka"> &copy;BP </div>
+</div>
+</body>
+</html>
