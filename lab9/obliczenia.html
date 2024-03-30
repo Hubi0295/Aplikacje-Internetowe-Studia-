@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Szybki kurs HTML </title>
     <link rel="stylesheet" href="CSS/style.css" type="text/css">
-    <script src="https://cdn.jsdelivr.net/npm/imagesloaded"></script>
+    <script src="JS/funkcje.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="JS/jQ.js"></script>
+
 </head>
 <body>
 <div id="kontener">
@@ -18,6 +21,8 @@
                 <ul>
                     <li><a href="formularze.html" >Pola formularza</a></li>
                     <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+                    <li><a href="kalkulator.html" >Kalkulatorek</a></li>
+
                 </ul>
             </li>
             <li><a href="galeria.html" title="">Galeria</a></li>
@@ -25,24 +30,15 @@
     </div>
 
     <div id="tresc">
-            <h2 id="galeria-zdjec">Galeria zdjęć</h2>
-        <table>
-            <tr>
-                <td><a href="static/zdjecia/obraz1.jpg" target="_blank"><img src="static/miniaturki/obraz1.jpg" alt="obraz1"> </a></td>
-                <td><a href="static/zdjecia/obraz2.jpg" target="_blank"><img src="static/miniaturki/obraz2.jpg" alt="obraz2"> </a></td>
-                <td><a href="static/zdjecia/obraz3.jpg" target="_blank"><img src="static/miniaturki/obraz3.jpg" alt="obraz3"> </a></td>
-            </tr>
-            <tr>
-                <td><a href="static/zdjecia/obraz4.jpg" target="_blank"><img src="static/miniaturki/obraz4.jpg" alt="obraz4"> </a></td>
-                <td><a href="static/zdjecia/obraz5.jpg" target="_blank"><img src="static/miniaturki/obraz5.jpg" alt="obraz5"> </a></td>
-                <td><a href="static/zdjecia/obraz6.jpg" target="_blank"><img src="static/miniaturki/obraz6.jpg" alt="obraz6"> </a></td>
-            </tr>
-            <tr>
-                <td><a href="static/zdjecia/obraz7.jpg" target="_blank"><img src="static/miniaturki/obraz7.jpg" alt="obraz7"> </a></td>
-                <td><a href="static/zdjecia/obraz8.jpg" target="_blank"><img src="static/miniaturki/obraz8.jpg" alt="obraz8"> </a></td>
-                <td><a href="static/zdjecia/obraz9.jpg" target="_blank"><img src="static/miniaturki/obraz9.jpg" alt="obraz9"> </a></td>
-            </tr>
-        </table>
+        <h3>Pożyczka</h3>
+            <table><tbody>
+            <tr><td>Kwota:</td><td><input id="l1" /></td> </tr>
+            <tr><td>Ile rat:</td><td><input id="l2" /></td> </tr>
+            <tr><td>Procent:</td><td><input id="procent" /></td> </tr>
+            <tr><td>Rata miesięczna:</td><td><input id="rata" /></td> </tr>
+            <tr><td>Kwota z odsetkami:</td><td><input id="kwotaZOdsetkami" /></td> </tr>
+            <tr><td><button onclick="oblicz()" id="ratka">Oblicz ratę stałą</button></td>
+            </tbody></table>
     </div>
     <div id="pasek">
         <div class="box">
