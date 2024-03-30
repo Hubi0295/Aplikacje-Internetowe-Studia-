@@ -1,0 +1,33 @@
+table {
+    background:#ffffb3;
+    text-align:center;
+    width:94%;
+    margin:2%;
+    border:1pt solid #000040;
+}
+body {
+ background: #ADD8E6;
+}
+caption {
+    font-size:120%;
+    text-decoration-style: solid;
+}
+tfoot, thead, #stopka {
+    background:#0000a0;
+    color:#ffffff;
+    font-size:110%
+}
+#stopka{
+    text-align: center;
+}
+td, th {
+    border:1pt solid #000040;
+}
+
+tfoot a {
+    color:#ffffff;
+}
+
+*.parzysty {
+    background:#ffffff;
+}

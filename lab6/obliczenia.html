@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Szybki kurs HTML </title>
     <link rel="stylesheet" href="CSS/style.css" type="text/css">
+    <script src="JS/funkcje.js"></script>
 </head>
 <body>
 <div id="kontener">
@@ -17,6 +18,8 @@
                 <ul>
                     <li><a href="formularze.html" >Pola formularza</a></li>
                     <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+                    <li><a href="kalkulator.html" >Kalkulatorek</a></li>
+
                 </ul>
             </li>
             <li><a href="galeria.html" title="">Galeria</a></li>
@@ -24,19 +27,15 @@
     </div>
 
     <div id="tresc">
-        <h3><b>Podstawowe znaczniki HTML to:</b></h3>
-        <ul>
-            <li> &lt;html&gt;  - korzeń dokumentu</li>
-            <li> &lt;head&gt;  - nagłówek strony z informacjami dla przegladarek</li>
-            <li> &lt;body&gt;  - właściwa treść dokumenty widoczna w oknie przeglądarki</li>
-            <li> &lt;div&gt;  - element blokowy</li>
-            <li> &lt;p&gt;  - akapit</li>
-            <li> &lt;tr&gt;  - wiersz tabeli</li>
-            <li> &lt;ol&gt;&lt;ul&gt; i &lt;li&gt;  - elementy listy wypunktowanej lub numerowanej</li>
-            <li> &lt;img&gt;  - obrazek</li>
-            <li> &lt;a&gt;  - hiperłącze</li>
-        </ul>
-        <p><a href="">HTML walidator<img src="w3c.png" alt="abc"></a></p>
+        <h3>Pożyczka</h3>
+            <table><tbody>
+            <tr><td>Kwota:</td><td><input id="l1" /></td> </tr>
+            <tr><td>Ile rat:</td><td><input id="l2" /></td> </tr>
+            <tr><td>Procent:</td><td><input id="procent" /></td> </tr>
+            <tr><td>Rata miesięczna:</td><td><input id="rata" /></td> </tr>
+            <tr><td>Kwota z odsetkami:</td><td><input id="kwotaZOdsetkami" /></td> </tr>
+            <tr><td><button onclick="oblicz()" id="ratka">Oblicz ratę stałą</button></td>
+            </tbody></table>
     </div>
     <div id="pasek">
         <div class="box">

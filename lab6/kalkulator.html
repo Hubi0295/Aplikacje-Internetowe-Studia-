@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!DOCTYPE HTML>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Szybki kurs HTML </title>
+    <title> Dostęp do pól formularza</title>
+    <script src="JS/kalkulator.js"></script>
     <link rel="stylesheet" href="CSS/style.css" type="text/css">
+
 </head>
 <body>
 <div id="kontener">
@@ -17,26 +17,33 @@
                 <ul>
                     <li><a href="formularze.html" >Pola formularza</a></li>
                     <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+                    <li><a href="kalkulator.html" >Kalkulatorek</a></li>
+
                 </ul>
             </li>
             <li><a href="galeria.html" title="">Galeria</a></li>
         </ul>
     </div>
-
     <div id="tresc">
-        <h3><b>Podstawowe znaczniki HTML to:</b></h3>
-        <ul>
-            <li> &lt;html&gt;  - korzeń dokumentu</li>
-            <li> &lt;head&gt;  - nagłówek strony z informacjami dla przegladarek</li>
-            <li> &lt;body&gt;  - właściwa treść dokumenty widoczna w oknie przeglądarki</li>
-            <li> &lt;div&gt;  - element blokowy</li>
-            <li> &lt;p&gt;  - akapit</li>
-            <li> &lt;tr&gt;  - wiersz tabeli</li>
-            <li> &lt;ol&gt;&lt;ul&gt; i &lt;li&gt;  - elementy listy wypunktowanej lub numerowanej</li>
-            <li> &lt;img&gt;  - obrazek</li>
-            <li> &lt;a&gt;  - hiperłącze</li>
-        </ul>
-        <p><a href="">HTML walidator<img src="w3c.png" alt="abc"></a></p>
+        <fieldset><legend>Kalkulatorek: </legend>
+        <div id="wpisywanie">
+        <table><tbody>
+        <tr><td><h3>Wpisz liczby: </h3></td><td>
+        <tr><td>X:</td></tr><tr><td><input id="l1"/></td></tr>
+        <tr><td>Y:</td></tr><tr><td><input id="l2"/></td></tr>
+        <tr><td><button onclick="oblicz()">Oblicz: </button></td>
+        </tbody></table></div>
+
+        <div id="operator">
+        <table><tbody>
+        <tr><td><h3>Działanie: </h3></td><td>
+        <tr><td><input type="radio" name="operator" id="dodawanie" value="+"/>+</td><td>
+        <tr><td><input type="radio" name="operator" id="odejmowanie"value="-"/>-</td><td>
+        <tr><td><input type="radio" name="operator" id="mnozenie" value="*"/>*</td><td>
+        <tr><td><input type="radio" name="operator" id="dzielenie" value="/"/>/</td><td>
+        <tr><td>Wynik</td><td><input id="wynik" disabled value=""/></td></tr>
+        </tbody></table></div>
+        </fieldset>
     </div>
     <div id="pasek">
         <div class="box">
