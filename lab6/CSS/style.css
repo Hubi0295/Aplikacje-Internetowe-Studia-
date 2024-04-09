@@ -91,18 +91,23 @@ ul#nav li:hover ul {
 *.box a{
     color:#ffffb0;
 }
-td{
-    padding-left:25px;
-    padding-top: 1%;
-}
 
-table{
-  margin-left: auto;
-  margin-right: auto;
-}
+
+
 #galeria-zdjec {
     background: #ADD8E6;
     color: #000000;
     text-align: center;
     font-weight: 300;
+}
+#wpisywanie{
+    float:left;
+    width:30%;
+}
+#operator{
+    float:left;
+    width:25%;
+}
+#ratka{
+    margin-left:50px;
 }

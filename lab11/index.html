@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz zapisywania danych</title>
+    <script>
+// Funkcja do zapisywania danych w localStorage
+function zapiszPare() {
+    var kod = document.getElementById("kod").value;
+    var nazwaKoloru = document.getElementById("nazwaKoloru").value;
+
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem(kod, nazwaKoloru);
+        alert("Para zapisana poprawnie.");
+    } else {
+        alert("Twoja przeglądarka nie obsługuje localStorage.");
+    }
+}
+
+// Funkcja do wyświetlania wszystkich par z localStorage
+function pokazWszystkiePary() {
+    var wynik = "<strong><h2>Dane z session storage:</h2></strong>";
+    for(var i = 0; i < localStorage.length; i++) {
+        var klucz = localStorage.key(i);
+        var wartosc = localStorage.getItem(klucz);
+        wynik += "<p style=background-color:#"+klucz+">"+wartosc +", "+"kod koloru: "+klucz+ "</p>";
+    }
+    document.getElementById("wynik").innerHTML = wynik;
+}
+
+// Funkcja do usuwania wszystkich danych z localStorage
+function usunDane() {
+    if (confirm("Czy na pewno chcesz usunąć wszystkie dane?")) {
+        localStorage.clear();
+        document.getElementById("wynik").innerHTML = "Wszystkie dane zostały usunięte.";
+    }
+}
+</script>
+</head>
+<body>
+<form>
+    <label for="kod">Kod szesnastkowy:</label>
+    <input type="text" id="kod" name="kod" pattern="^[0-9A-Fa-f]{6}$" required>
+    <br><br>
+    <label for="nazwaKoloru">Nazwa koloru:</label>
+    <input type="text" id="nazwaKoloru" name="nazwaKoloru" required>
+    <br><br>
+    <button type="button" onclick="zapiszPare()">Zapisz parę</button>
+    <button type="button" onclick="pokazWszystkiePary()">Pokaż wszystkie pary</button>
+    <button type="button" onclick="usunDane()">Usuń dane</button>
+</form>
+<div id="wynik"></div>
+</body>
+</html>
