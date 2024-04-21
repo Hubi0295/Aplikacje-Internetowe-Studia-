@@ -146,7 +146,12 @@ table{
         flex-direction: column;
         align-items: center;
     }
-
+    #menu ul{
+        text-align: center;
+    }
+    SECTION{
+        width:85%;
+    }
     #pasek, #tresc {
         width: 100%;
     }

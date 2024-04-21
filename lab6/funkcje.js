@@ -9,5 +9,10 @@ function oblicz()
 
     var r=document.getElementById('rata');
     var s=document.getElementById('suma');
-    r.value=l1*(l3/12)/(1-(1/Math.pow((1+(l3/12)),l2)));
+    if(l2==0 || l3==0){
+        r.value="Nie można podać 0 w racie lub procencie";
+    }
+    else{
+        r.value=l1*(l3/12)/(1-(1/Math.pow((1+(l3/12)),l2)));
+    }
 }

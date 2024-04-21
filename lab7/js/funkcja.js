@@ -43,7 +43,7 @@ function pokazPost()
  tresc='<h2><br />Dodaj post</h2>';
  tresc+='<article class="srodek" ><form action="mailto:hubert.szelepusta@gmail.com" method="post" onsubmit="return pokazDane();"> Twój email:<br /> <input type="email" name="email" id="email" required /><br />'
   +'Naziwsko i imię:<br /> <input type="text" name="dane" id="dane" required /><br />'
-  +'Telefon:<br /> <input type="tel" name="tel" id="tel" required /><br />'
+  +'Telefon:<br /> <input type="tel" name="tel" id="tel" pattern="[0-9]{9}" required /><br />'
   +'Zainteresowania:<br /> <input type="checkbox" name="Zainteresowania" id="Sport" value="Sport"/>Sport'
   +'<input type="checkbox" name="Zainteresowania" id="Muzyka" value="Muzyka"/>Muzyka'
   +'<input type="checkbox" name="Zainteresowania" id="Film" value="Film"/>Film'

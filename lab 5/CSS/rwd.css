@@ -39,7 +39,7 @@ footer { clear:both; }
     }
     .slajd {width: 90%; }
 }
-@media screen and (min-width: 480px){
+@media screen and (min-width: 480px)and (max-width: 720px){
     body { font-size: 13px; }
     h1 { font-size: 23px; }
     h2 { font-size: 18px; }
@@ -50,8 +50,6 @@ footer { clear:both; }
     }
     .slajd {width: 45%; }
 }
-@media only screen and (min-width : 768px)
-and (max-width : 1024px)
-and (orientation : landscape)
+@media only screen and (min-width : 768px)and (max-width : 1024px)and (orientation : landscape)
 {
 }

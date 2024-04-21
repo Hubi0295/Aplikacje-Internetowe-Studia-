@@ -37,7 +37,7 @@ function sprawdz()
 
     if (!sprawdzPole("email",obiektemail))
         { ok=false;
-         document.getElementById("email_error").innerHTML="Wpisz poprawnie wiek!";
+         document.getElementById("email_error").innerHTML="Wpisz poprawnie email!";
         }
     else document.getElementById("email_error").innerHTML="";
     if(!sprawdz_radio("zaplata")){

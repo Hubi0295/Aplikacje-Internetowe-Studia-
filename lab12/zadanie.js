@@ -7,9 +7,9 @@ class User{
     
     static formularzRejestracji(){
         var formularz = "";
-        formularz += '<div>email: <input type=email name=email id=email> <br>';
-        formularz += 'login: <input type=text name=login id=login> <br>';
-        formularz += 'haslo: <input type=password" name=password id=password> <br>';
+        formularz += '<div>email: <input type=email name=email id=email required> <br>';
+        formularz += 'login: <input type=text name=login id=login required> <br>';
+        formularz += 'haslo: <input type=password name=password id=password required> <br>';
         formularz += '<button type="button" id="rejestruj">Zarejestruj</button></div><br>';
         document.getElementById('formularz').innerHTML=formularz;
     }
@@ -40,17 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
         var login = document.getElementById("login").value;
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
-
+        if (!(email && login && password)) {
+            document.getElementById('info').innerHTML = "Wypełnij wszystkie pola!"
+            return;
+        }
         if (User.sprawdzCzyIstniejeLogin(login)) {
-            alert("Użytkownik o podanym loginie już istnieje!");
+            document.getElementById('info').innerHTML="Użytkownik o podanym loginie już istnieje!"
             return;
         }
 
         if (User.sprawdzCzyIstniejeEmail(email)) {
-            alert("Użytkownik o podanym adresie e-mail już istnieje!");
+            document.getElementById('info').innerHTML="Użytkownik o podanym mailu już istnieje!"
             return;
         }
-
+        document.getElementById('info').innerHTML=""
         var user = new User(email, login, password);
         localStorage.setItem(user.login, JSON.stringify(user));
     });

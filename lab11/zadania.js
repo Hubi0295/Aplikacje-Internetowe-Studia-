@@ -62,21 +62,22 @@ function wyswietlKoszyk(){
 }
 function usunProdukt(){
       var tab = document.getElementsByName("produkty");
-      var op;
+      var op=0;
       for(let i=0;i<tab.length;i++){
          if(tab[i].checked){
               op = i;
-              console.log(op);
               break;
          }
        }
        var lista = JSON.parse(localStorage.getItem('lista'));
-       lista.splice(op);
+       lista.splice(op,1)
        localStorage.setItem('lista', JSON.stringify(lista));
        wyswietlKoszyk();
 }
 function usunWszystkieProdukty(){
-       localStorage.clear();
+       var lista = JSON.parse(localStorage.getItem('lista'));
+       pusta=[];
+       localStorage.setItem('lista',JSON.stringify(pusta));
        wyswietlKoszyk();
 }
 function wyszukaj(){
